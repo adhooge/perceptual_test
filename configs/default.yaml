@@ -6,43 +6,43 @@ showButtonPreviousPage: true
 remoteService: service/write.php
 
 pages:
-  - type: likert_multi_stimulus
-    id: lms2
-    name: Score
-    content: Rate the samples !
-    randomize: false
-    mustPlayback: ended
-    showConditionNames: false
-    stimuli:
-      C1: configs/resources/audio/mono_c1.wav
-      C2: configs/resources/audio/mono_c2.wav
+  # - type: likert_multi_stimulus
+  #   id: lms2
+  #   name: Score
+  #   content: Rate the samples !
+  #   randomize: false
+  #   mustPlayback: ended
+  #   showConditionNames: false
+  #   stimuli:
+  #     C1: configs/resources/audio/mono_c1.wav
+  #     C2: configs/resources/audio/mono_c2.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
+  #   response:
+  #     - value: bad
+  #       label: Bad
+  #       img: configs/resources/images/star_off.png
+  #       imgSelected: configs/resources/images/star_on.png
+  #       imgHigherResponseSelected: configs/resources/images/star_on.png
+  #     - value: poor
+  #       label: Poor
+  #       img: configs/resources/images/star_off.png
+  #       imgSelected: configs/resources/images/star_on.png
+  #       imgHigherResponseSelected: configs/resources/images/star_on.png
+  #     - value: fair
+  #       label: Fair
+  #       img: configs/resources/images/star_off.png
+  #       imgSelected: configs/resources/images/star_on.png
+  #       imgHigherResponseSelected: configs/resources/images/star_on.png
+  #     - value: good
+  #       label: Good
+  #       img: configs/resources/images/star_off.png
+  #       imgSelected: configs/resources/images/star_on.png
+  #       imgHigherResponseSelected: configs/resources/images/star_on.png
+  #     - value: excellent
+  #       label: Excellent
+  #       img: configs/resources/images/star_off.png
+  #       imgSelected: configs/resources/images/star_on.png
+  #       imgHigherResponseSelected: configs/resources/images/star_on.png
 
   - type: finish
     name: Thank you
@@ -70,7 +70,7 @@ pages:
 
       - type: likert
         name: caract
-        label: How
+        label: "You are:"
         response:
           - value: pro
             label: Professional Musician
