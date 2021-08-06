@@ -11,6 +11,7 @@ pages:
     name: Score
     content: Rate the samples !
     randomize: false
+    mustPlayback: ended
     showConditionNames: false
     stimuli:
       C1: configs/resources/audio/mono_c1.wav
