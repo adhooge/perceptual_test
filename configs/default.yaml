@@ -1,63 +1,47 @@
-# test config mushra page, no waveform, 3 conditions,  looping, anchor35, anchor 70
-
-testname: MUSHRA with custom Questionaire
-testId: mushra_customquestionaire
+testname: Internship Experiment
+testId: lss_lms
 bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
 remoteService: service/write.php
 
 pages:
-  - type: mushra
-    id: trial1
-    name: Mono Trial
-    content: test description
-    showWaveform: false
-    enableLooping: false
-    reference: configs/resources/audio/mono_ref.wav
-    createAnchor35: false
-    createAnchor70: false
-    randomize: true
+  - type: likert_multi_stimulus
+    id: lms2
+    name: Score
+    content: Rate the samples !
+    randomize: false
     showConditionNames: false
-    strict: false
     stimuli:
       C1: configs/resources/audio/mono_c1.wav
       C2: configs/resources/audio/mono_c2.wav
-      C3: configs/resources/audio/mono_c3.wav
 
-  - type: mushra
-    id: trial2
-    name: Mono Trial
-    content: test description
-    showWaveform: false
-    enableLooping: false
-    reference: configs/resources/audio/mono_ref.wav
-    createAnchor35: false
-    createAnchor70: false
-    randomize: true
-    showConditionNames: false
-    strict: false
-    stimuli:
-      C1: configs/resources/audio/mono_c1.wav
-      C2: configs/resources/audio/mono_c2.wav
-      C3: configs/resources/audio/mono_c3.wav
-
-  - type: mushra
-    id: trial3
-    name: Mono Trial
-    content: test description
-    showWaveform: false
-    enableLooping: false
-    reference: configs/resources/audio/mono_ref.wav
-    createAnchor35: false
-    createAnchor70: false
-    randomize: true
-    showConditionNames: false
-    strict: false
-    stimuli:
-      C1: configs/resources/audio/mono_c1.wav
-      C2: configs/resources/audio/mono_c2.wav
-      C3: configs/resources/audio/mono_c3.wav
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
 
   - type: finish
     name: Thank you
@@ -66,9 +50,6 @@ pages:
     showResults: true
     writeResults: true
     questionnaire:
-      - type: text
-        label: eMail
-        name: email
       - type: number
         label: Age
         name: age
@@ -76,12 +57,25 @@ pages:
         max: 100
         default: 30
       - type: likert
-        name: gender
-        label: Gender
+        name: from
+        label: How have you heard about this experiment?
         response:
-          - value: female
-            label: Female
-          - value: male
-            label: Male
+          - value: networks
+            label: Social Networks
+          - value: work
+            label: Work
+          - value: link
+            label: Direct Link
+
+      - type: likert
+        name: caract
+        label: How
+        response:
+          - value: pro
+            label: Professional Musician
+          - value: amateur
+            label: Amateur Musician
+          - value: worker
+            label: Work in Audio field
           - value: other
             label: Other
