@@ -6,6 +6,11 @@ showButtonPreviousPage: true
 remoteService: service/write.php
 
 pages:
+  - type: generic
+    id: all
+    name: All listening tests
+    content: <p>This is a perceptive experience in the context of an ATIAM master degree internship at Pixtunes, with IRCAM. You will listen to a set of audio samples of flute and violin. This test lasts about 10min, at each step there are two 5s samples to listen to and then to score. Have a good listening! </p>
+
   - type: likert_multi_stimulus
     id: lms1
     name: Score
