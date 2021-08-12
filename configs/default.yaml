@@ -1,48 +1,1530 @@
 testname: Internship Experiment
-testId: lss_lms
+testId: exp
 bufferSize: 2048
 stopOnErrors: true
 showButtonPreviousPage: true
 remoteService: service/write.php
 
 pages:
-  # - type: likert_multi_stimulus
-  #   id: lms2
-  #   name: Score
-  #   content: Rate the samples !
-  #   randomize: false
-  #   mustPlayback: ended
-  #   showConditionNames: false
-  #   stimuli:
-  #     C1: configs/resources/audio/mono_c1.wav
-  #     C2: configs/resources/audio/mono_c2.wav
+  - type: likert_multi_stimulus
+    id: lms1
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-test0-pred.wav
+      C2: configs/resources/audio/lstm-results-violin-test0-pred.wav
 
-  #   response:
-  #     - value: bad
-  #       label: Bad
-  #       img: configs/resources/images/star_off.png
-  #       imgSelected: configs/resources/images/star_on.png
-  #       imgHigherResponseSelected: configs/resources/images/star_on.png
-  #     - value: poor
-  #       label: Poor
-  #       img: configs/resources/images/star_off.png
-  #       imgSelected: configs/resources/images/star_on.png
-  #       imgHigherResponseSelected: configs/resources/images/star_on.png
-  #     - value: fair
-  #       label: Fair
-  #       img: configs/resources/images/star_off.png
-  #       imgSelected: configs/resources/images/star_on.png
-  #       imgHigherResponseSelected: configs/resources/images/star_on.png
-  #     - value: good
-  #       label: Good
-  #       img: configs/resources/images/star_off.png
-  #       imgSelected: configs/resources/images/star_on.png
-  #       imgHigherResponseSelected: configs/resources/images/star_on.png
-  #     - value: excellent
-  #       label: Excellent
-  #       img: configs/resources/images/star_off.png
-  #       imgSelected: configs/resources/images/star_on.png
-  #       imgHigherResponseSelected: configs/resources/images/star_on.png
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms2
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-violin-test0-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-test0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms3
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-test1-pred.wav
+      C2: configs/resources/audio/unet-results-violin-test1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms4
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-test1-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-test1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms5
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-test2-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-test2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms6
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-test2-pred.wav
+      C2: configs/resources/audio/unet-results-violin-test2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms7
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-test3-pred.wav
+      C2: configs/resources/audio/lstm-results-violin-test3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms8
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-violin-test3-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-test3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms9
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-test4-pred.wav
+      C2: configs/resources/audio/unet-results-violin-test4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms10
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-test4-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-test4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms11
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-midi0-pred.wav
+      C2: configs/resources/audio/lstm-results-violin-midi0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms12
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-violin-midi0-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-midi0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms13
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-midi1-pred.wav
+      C2: configs/resources/audio/unet-results-violin-midi1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms14
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-midi1-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-midi1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms15
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-midi2-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-midi2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms16
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-midi2-pred.wav
+      C2: configs/resources/audio/unet-results-violin-midi2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms17
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-midi3-pred.wav
+      C2: configs/resources/audio/lstm-results-violin-midi3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms18
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-violin-midi3-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-midi3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms19
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-violin-midi4-pred.wav
+      C2: configs/resources/audio/unet-results-violin-midi4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms20
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-violin-midi4-pred.wav
+      C2: configs/resources/audio/diffusion-results-violin-midi4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms21
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-test0-pred.wav
+      C2: configs/resources/audio/lstm-results-flute-test0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms22
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-flute-test0-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-test0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms23
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-test1-pred.wav
+      C2: configs/resources/audio/unet-results-flute-test1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms24
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-test1-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-test1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms25
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-test2-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-test2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms26
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-test2-pred.wav
+      C2: configs/resources/audio/unet-results-flute-test2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms27
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-test3-pred.wav
+      C2: configs/resources/audio/lstm-results-flute-test3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms28
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-flute-test3-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-test3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms29
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-test4-pred.wav
+      C2: configs/resources/audio/unet-results-flute-test4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms30
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-test4-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-test4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms31
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-midi0-pred.wav
+      C2: configs/resources/audio/lstm-results-flute-midi0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms32
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-flute-midi0-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-midi0-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms33
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-midi1-pred.wav
+      C2: configs/resources/audio/unet-results-flute-midi1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms34
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-midi1-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-midi1-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms35
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-midi2-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-midi2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms36
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-midi2-pred.wav
+      C2: configs/resources/audio/unet-results-flute-midi2-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms37
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-midi3-pred.wav
+      C2: configs/resources/audio/lstm-results-flute-midi3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms38
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/unet-results-flute-midi3-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-midi3-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms39
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/baseline-results-flute-midi4-pred.wav
+      C2: configs/resources/audio/unet-results-flute-midi4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+
+  - type: likert_multi_stimulus
+    id: lms40
+    name: Score
+    content: Rate the samples !
+    randomize: false
+    mustPlayback: ended
+    showConditionNames: false
+    stimuli:
+      C1: configs/resources/audio/lstm-results-flute-midi4-pred.wav
+      C2: configs/resources/audio/diffusion-results-flute-midi4-pred.wav
+
+    response:
+      - value: bad
+        label: Bad
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: poor
+        label: Poor
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: fair
+        label: Fair
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: good
+        label: Good
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
+      - value: excellent
+        label: Excellent
+        img: configs/resources/images/star_off.png
+        imgSelected: configs/resources/images/star_on.png
+        imgHigherResponseSelected: configs/resources/images/star_on.png
 
   - type: finish
     name: Thank you
