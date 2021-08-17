@@ -9,7 +9,7 @@ pages:
   - type: generic
     id: all
     name: All listening tests
-    content: <p>This is a perceptive experience in the context of an ATIAM master degree internship at Pixtunes, with IRCAM. You will listen to a set of audio samples of flute and violin. This test lasts about 10min, at each step there are four 5s samples to listen to, then you should score them according to how realistic they sound. Have a good listening! </p>
+    content: <p>This is a perceptive experience in the context of an ATIAM master degree internship at Pixtunes, with IRCAM. You will listen to a set of audio samples of violin (10 first pages) and then flute samples (10 last pages). This test lasts about 10min, at each step there are four 5s samples to listen to, then you should score them according to how realistic they sound.Have a good listening! </p>
 
   - type: likert_multi_stimulus
     id: lms0
