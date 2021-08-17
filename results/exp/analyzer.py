@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # LOAD FILE
-data = pd.read_csv("7lms.csv")
+data = pd.read_csv("9lms.csv")
 
 # CHANGE LABELS
 data = data.replace(["C1", "C2", "C3", "C4"],
@@ -46,9 +46,11 @@ rqst = data[["stimuli", "stimuli_rating", "type",
                                      "instrument"]).describe()
 print(rqst)
 
-# NUMBER OF PARTICIPANTS
+# GLOBAL INFORMATION
 
-print("Number of participants = ", data.trial_id.value_counts().lms1)
+print("Number of participants = ", data.trial_id.value_counts().lms1 // 4)
+print("Provenance : ", data["from"].value_counts(normalize=True))
+print("Profil : ", data["caract"].value_counts(normalize=True))
 
 # BOXPLOTS
 sns.set_theme(style="whitegrid")
@@ -56,6 +58,7 @@ sns.set_theme(style="whitegrid")
 f, ax = plt.subplots(figsize=(7, 6))
 sns.catplot(x="stimuli",
             y="stimuli_rating",
+            order=["baseline", "lstm", "unet", "diffusion"],
             hue="instrument",
             col="type",
             kind="box",
@@ -63,7 +66,7 @@ sns.catplot(x="stimuli",
             width=.5).set(xlabel='Models', ylabel='Score')
 
 # Tweak the visual presentation
-#ax.xaxis.grid(True)
-#ax.set(ylabel="")
+ax.xaxis.grid(True)
+ax.set(ylabel="")
 sns.despine(trim=True, left=True)
 plt.show()
