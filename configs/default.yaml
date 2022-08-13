@@ -9,807 +9,512 @@ pages:
   - type: generic
     id: all
     name: All listening tests
-    content: <p>This is a perceptive experience in the context of an ATIAM master degree internship at Pixtunes, with IRCAM. You will listen to a set of audio samples of violin (10 first pages) and then flute samples (10 last pages). This test lasts about 10min, at each step there are four 5s samples to listen to, then you should score them according to how realistic they sound.Have a good listening! </p>
+    content: <p>This is a perceptive experience in the context of an ATIAM master degree internship at SonyCSL, with IRCAM. You will hear a reference sound of an electric guitar note processed with an audio effect. You then have to rate the reconstruction of the audio effect proposed in the other sounds. 
+              Please note that the guitar note in itself is not reconstructed and that only the reproduction of the effect is evaluated here. For example, if the reference sound has distortion but the reproduction is completely dry (no effect can be heard), then the rating should be 0.</p>
 
-  - type: likert_multi_stimulus
-    id: lms0
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: volume
+    id: vol
+    name: Volume settings
+    content: Please adjust the volume!
+    stimulus: configs/resources/audio/references/delay_ref_1.wav
+    defaultVolume: 0.5
+
+  - type: mushra
+    id: trial0
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_1.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-test0-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-test0-pred.wav
-      C3: configs/resources/audio/unet-results-violin-test0-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-test0-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_1.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_1.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_1.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_1.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_1.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms1
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_2.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-test1-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-test1-pred.wav
-      C3: configs/resources/audio/unet-results-violin-test1-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-test1-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_2.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_2.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_2.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_2.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_2.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms2
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_3.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-test2-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-test2-pred.wav
-      C3: configs/resources/audio/unet-results-violin-test2-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-test2-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_3.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_3.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_3.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_3.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_3.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms3
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_4.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-test3-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-test3-pred.wav
-      C3: configs/resources/audio/unet-results-violin-test3-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-test3-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_4.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_4.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_4.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_4.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_4.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms4
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_5.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-test4-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-test4-pred.wav
-      C3: configs/resources/audio/unet-results-violin-test4-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-test4-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_5.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_5.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_5.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_5.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_5.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms5
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_6.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-midi0-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-midi0-pred.wav
-      C3: configs/resources/audio/unet-results-violin-midi0-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-midi0-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_6.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_6.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_6.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_6.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_6.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms6
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_7.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-midi1-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-midi1-pred.wav
-      C3: configs/resources/audio/unet-results-violin-midi1-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-midi1-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_7.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_7.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_7.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_7.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_7.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms7
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_8.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-midi2-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-midi2-pred.wav
-      C3: configs/resources/audio/unet-results-violin-midi2-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-midi2-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_8.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_8.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_8.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_8.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_8.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms8
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_9.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-midi3-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-midi3-pred.wav
-      C3: configs/resources/audio/unet-results-violin-midi3-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-midi3-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_9.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_9.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_9.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_9.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_9.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms9
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Delay).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/delay_ref_10.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-violin-midi4-pred.wav
-      C2: configs/resources/audio/lstm-results-violin-midi4-pred.wav
-      C3: configs/resources/audio/unet-results-violin-midi4-pred.wav
-      C4: configs/resources/audio/diffusion-results-violin-midi4-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/delay_rec_10.wav
+      C2: configs/resources/audio/param_no_finetuning/delay_rec_10.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/delay_rec_10.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/delay_rec_10.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/delay_rec_10.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms10
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_1.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-test0-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-test0-pred.wav
-      C3: configs/resources/audio/unet-results-flute-test0-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-test0-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_1.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_1.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_1.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_1.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_1.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms11
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_2.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-test1-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-test1-pred.wav
-      C3: configs/resources/audio/unet-results-flute-test1-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-test1-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_1.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_1.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_2.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_2.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_2.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms12
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_2.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-test2-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-test2-pred.wav
-      C3: configs/resources/audio/unet-results-flute-test2-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-test2-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_2.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_2.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_2.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_2.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_2.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms13
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_3.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-test3-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-test3-pred.wav
-      C3: configs/resources/audio/unet-results-flute-test3-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-test3-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_3.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_3.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_3.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_3.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_3.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms14
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_4.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-test4-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-test4-pred.wav
-      C3: configs/resources/audio/unet-results-flute-test4-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-test4-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_4.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_4.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_4.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_4.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_4.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms15
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_5.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-midi0-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-midi0-pred.wav
-      C3: configs/resources/audio/unet-results-flute-midi0-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-midi0-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_5.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_5.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_5.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_5.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_5.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms16
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_6.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-midi1-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-midi1-pred.wav
-      C3: configs/resources/audio/unet-results-flute-midi1-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-midi1-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_6.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_6.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_6.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_6.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_6.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms17
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_7.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-midi2-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-midi2-pred.wav
-      C3: configs/resources/audio/unet-results-flute-midi2-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-midi2-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_7.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_7.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_7.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_7.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_7.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms18
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_8.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-midi3-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-midi3-pred.wav
-      C3: configs/resources/audio/unet-results-flute-midi3-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-midi3-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_8.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_8.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_8.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_8.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_8.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-
-  - type: likert_multi_stimulus
-    id: lms19
-    name: Score
-    content: Rate the samples !
-    randomize: true
-    mustPlayback: ended
-    showConditionNames: false
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_9.wav
+    createAnchor35: false
+    createAnchor70: false
     stimuli:
-      C1: configs/resources/audio/baseline-results-flute-midi4-pred.wav
-      C2: configs/resources/audio/lstm-results-flute-midi4-pred.wav
-      C3: configs/resources/audio/unet-results-flute-midi4-pred.wav
-      C4: configs/resources/audio/diffusion-results-flute-midi4-pred.wav
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_9.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_9.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_9.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_9.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_9.wav
 
-    response:
-      - value: bad
-        label: Bad
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: poor
-        label: Poor
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: fair
-        label: Fair
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: good
-        label: Good
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
-      - value: excellent
-        label: Excellent
-        img: configs/resources/images/star_off.png
-        imgSelected: configs/resources/images/star_on.png
-        imgHigherResponseSelected: configs/resources/images/star_on.png
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Distortion).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/disto_ref_10.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/disto_rec_10.wav
+      C2: configs/resources/audio/param_no_finetuning/disto_rec_10.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/disto_rec_10.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/disto_rec_10.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/disto_rec_10.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_1.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_1.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_1.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_1.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_1.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_1.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_2.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_2.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_2.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_2.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_2.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_2.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_3.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_3.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_3.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_3.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_3.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_3.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_4.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_4.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_4.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_4.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_4.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_4.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_5.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_5.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_5.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_5.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_5.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_5.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_6.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_6.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_6.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_6.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_6.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_6.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_7.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_7.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_7.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_7.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_7.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_7.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_8.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_8.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_8.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_8.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_8.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_8.wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_9.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_9.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_9.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_9.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_9.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_9wav
+
+  - type: mushra
+    id: trial2
+    name: Mono Trial
+    content: Rate the audio effect reconstruction (Modulation).
+    showWaveform: false
+    enableLooping: false
+    reference: configs/resources/audio/references/modulation_ref_10.wav
+    createAnchor35: false
+    createAnchor70: false
+    stimuli:
+      C1: configs/resources/audio/param-feat_no_finetuning/modulation_rec_10.wav
+      C2: configs/resources/audio/param_no_finetuning/modulation_rec_10.wav
+      C3: configs/resources/audio/mlp/163feat-no_conditioning-5_hidden/modulation_rec_10.wav
+      C4: configs/resources/audio/mlp/163feat-conditioning-5_hidden/modulation_rec_10.wav
+      C5: configs/resources/audio/mlp/211feat-conditioning-5_hidden/modulation_rec_10.wav
+
 
   - type: finish
     name: Thank you
